@@ -1,0 +1,20 @@
+body{
+	background:#d4cbcb;
+}
+header{
+    background-color: white;
+    color: rgb(240, 140, 17);
+    margin: 10px;
+}
+div ul li a{
+    text-align: justify;
+}
+#magazine{
+	width:1152px;
+	height: 752px;
+    margin: 50px 100px;
+}
+#magazine .turn-page{
+	background-color:rgb(189, 178, 178);
+	background-size:100% 100%;
+}
