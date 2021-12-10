@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">	
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="./lib/turnjs4/extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="./lib//turnjs4/lib/turn.min.js"></script>
+
+
+</head>
+<body>
+	<header>
+		<div>
+			
+		    <h1>Álbum de Figurinhas SenacRS 2021</h1>
+		</div>	
+	    <div>
+			<ul class="nav nav-pills nav-justified">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="pages/Capa.jpeg">Capa</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="pages/poema96.png">Introdução</a>
+			</li>
+			<li class="nav-item dropdown">
+			  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="pages/branco.png" role="button" aria-expanded="false">Professores</a>
+			  <ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="pages/profes 2.png">Professores pag 1</a></li>
+				<li><a class="dropdown-item" href="pages/12.png">Professores pag 2</a></li>
+			  </ul>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="pages/branco.png" role="button" aria-expanded="false">Alunos</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="pages/Alunos 1.png">Alunos pag 1</a></li>
+				  <li><a class="dropdown-item" href="pages/Alunos 2.png">Alunos pag 2</a></li>
+				  <li><a class="dropdown-item" href="pages/Alunos 3.png">Alunos pag 3</a></li>
+				  <li><a class="dropdown-item" href="pages/Alunos 4.png">Alunos pag 4</a></li>
+				</ul>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="pages/branco.png" role="button" aria-expanded="false">Senac</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="pages/senac 1.png">Senac pag 1</a></li>
+				  <li><a class="dropdown-item" href="pages/senac 2.png">Senac pag 2</a></li>
+				</ul>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="pages/branco.png" role="button" aria-expanded="false">Sandrismo</a>
+				<ul class="dropdown-menu">
+				  <li><a class="dropdown-item" href="pages/Sandrinho deus.png">Sandrinho pag 1</a></li>
+				  <li><a class="dropdown-item" href="pages/sandro 1.png">Sandrinho pag 2</a></li>
+				  <li><a class="dropdown-item" href="pages/Sandrinho 2.png">Sandrinho pag 2</a></li>
+				</ul>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="pages/agradecimento2.png">Agradecimento</a>
+			</li>
+			<br>
+		</div>		
+	</header>
+
+<div id="magazine">
+	<div style="background-image:url(pages/Capa.jpeg);"></div>
+	<div style="background-image:url(pages/branco.png);"></div>
+	<div style="background-image:url(pages/poema96.png);"></div>
+	<div style="background-image:url(pages/profes\ 2.png);"></div>
+	<div style="background-image:url(pages/12.png);"></div>
+	<div style="background-image:url(pages/Alunos\ 1.png);"></div>
+  <div style="background-image:url(pages/Alunos\ 2.png);"></div>
+	<div style="background-image:url(pages/Alunos\ 3.png);"></div>
+	<div style="background-image:url(pages/Alunos\ 4.png);"></div>
+	<div style="background-image:url(pages/senac\ 1.png);"></div>
+	<div style="background-image:url(pages/senac\ 2.png);"></div>
+	<div style="background-image:url(pages/Sandrinho\ deus.png);"></div>
+	<div style="background-image:url(pages/sandro\ 1.png);"></div>
+    <div style="background-image:url(pages/Sandrinho\ 2.png);"></div>
+	<div style="background-image:url(pages/branco.png);"></div>
+  <div style="background-image:url(pages/agradecimento2.png);"></div>
+  <div style="background-image:url(pages/emoji.png);"></div>
+</div>
+
+
+<script type="text/javascript">
+
+	$(window).ready(function() {
+		$('#magazine').turn({
+							display: 'double',
+							acceleration: true,
+							elevation:50,
+							when: {
+								turned: function(e, page) {
+									/*console.log('Current view: ', $(this).turn('view'));*/
+								}
+							}
+						});
+	});
+	
+	
+	$(window).bind('keydown', function(e){
+		
+		if (e.keyCode==37)
+			$('#magazine').turn('previous');
+		else if (e.keyCode==39)
+			$('#magazine').turn('next');
+			
+	});
+
+</script>
+
+</body>
+</html>
